@@ -3,7 +3,10 @@ import { TypeAnimation } from "react-type-animation";
 
 function FrontPage() {
   return (
-    <div className="h-screen flex justify-center items-center flex-col md:flex-row lg:ml-30 lg:mr-30">
+    <div
+      className="h-screen flex justify-center items-center flex-col md:flex-row lg:ml-30 lg:mr-30"
+      id="frontPage"
+    >
       <img
         className="rounded-full w-auto h-72 sm:max-w-xs md:max-w-sm lg:max-w-md object-cover idle-orbit md:mr-10 mt-24 md:mt-0 md:mb-0"
         src={MyFace}

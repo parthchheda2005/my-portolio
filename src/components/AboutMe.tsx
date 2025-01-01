@@ -21,30 +21,34 @@ const slugs = [
 
 function AboutMe() {
   return (
-    <div className="h-screen flex flex-col items-center my-28 sm:my-1">
-      <h1 className="text-5xl">about</h1>
-      <div className="flex lg:flex-row justify-evenly items-start mt-5 flex-col lg:gap-24 gap-12">
+    <div
+      className="w-full flex flex-col items-center justify-center p-4"
+      id="aboutMe"
+    >
+      <h1 className="text-5xl mb-8">about</h1>
+
+      <div className="w-full flex lg:flex-row flex-col items-center justify-center gap-12 lg:gap-24">
         <div className="flex justify-center">
           <IconCloud iconSlugs={slugs} />
         </div>
 
-        <div className="lg:pt-16 max-w-96 flex justify-center w-full">
-          <ul className="flex flex-col gap-8 text-lg text-center md:text-left items-center justify-center lg:mx-5">
-            <li>
+        <div className="w-full max-w-96 flex justify-center">
+          <ul className="w-full flex flex-col gap-8 text-lg">
+            <li className="text-center">
               📚 2nd year computer science student at the University of British
               Columbia
             </li>
-            <li>
+            <li className="text-center">
               👨‍💻 skills: javascript, typescript, python, java, c++, html, css,
               r, node.js, express, react, fastapi, mongodb, tailwindcss, git,
               github
             </li>
-            <li>
+            <li className="text-center">
               💻 interested in software development, and eagar to explore other
               fields as well!
             </li>
-            <li>
-              interests: soccer (COYB 🔵), fantasy sports ⚽️, puzzles 🧩{" "}
+            <li className="text-center">
+              interests: soccer (COYB 🔵), fantasy sports ⚽️, puzzles 🧩
             </li>
           </ul>
         </div>

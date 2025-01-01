@@ -11,18 +11,56 @@ function NavBar() {
 
   return (
     <div className="h-[6vh] w-full text-gray-100 flex justify-between items-center px-4 md:px-10 fixed top-0 z-10 md:bg-[#313639] bg-[#282b2d]">
-      <h1 className="text-2xl font-bold cursor-pointer lg:ml-60">
+      <h1
+        className="text-2xl font-bold cursor-pointer lg:ml-60"
+        onClick={() => {
+          const element = document.getElementById("frontPage");
+          element?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }}
+      >
         parth chheda
       </h1>
       <ul className="hidden md:flex space-x-8 lg:mr-60">
         <li>
-          <button className="hover:text-gray-300">about</button>
+          <button
+            className="hover:text-gray-300"
+            onClick={() => {
+              const element = document.getElementById("aboutMe");
+              element?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            about
+          </button>
         </li>
         <li>
-          <button className="hover:text-gray-300">projects</button>
+          <button
+            className="hover:text-gray-300"
+            onClick={() => {
+              const element = document.getElementById("projects");
+              element?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            projects
+          </button>
         </li>
         <li>
-          <button className="hover:text-gray-300">contact me</button>
+          <button
+            className="hover:text-gray-300"
+            onClick={() => {
+              const element = document.getElementById("contactMe");
+              element?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            contact me
+          </button>
         </li>
       </ul>
 

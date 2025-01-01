@@ -71,7 +71,10 @@ const projects = [
 
 function Projects() {
   return (
-    <div className="h-screen flex flex-col items-center my-28 sm:my-1">
+    <div
+      className="flex flex-col items-center my-28 sm:my-1 h-auto mt-7"
+      id="projects"
+    >
       <h1 className="text-5xl">projects</h1>
       <div className="mt-5 flex flex-wrap justify-center items-center">
         {projects.map((el: Project) => (
