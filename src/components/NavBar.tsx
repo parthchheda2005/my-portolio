@@ -1,9 +1,17 @@
 import { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { IoCloseSharp } from "react-icons/io5";
+import { motion, useSpring, useScroll } from "motion/react";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -80,16 +88,55 @@ function NavBar() {
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } md:hidden`}
       >
-        <button className="hover:text-gray-300" onClick={toggleMenu}>
+        <button
+          className="hover:text-gray-300"
+          onClick={() => {
+            const element = document.getElementById("aboutMe");
+            element?.scrollIntoView({
+              behavior: "smooth",
+            });
+            toggleMenu();
+          }}
+        >
           about
         </button>
-        <button className="hover:text-gray-300" onClick={toggleMenu}>
+        <button
+          className="hover:text-gray-300"
+          onClick={() => {
+            const element = document.getElementById("projects");
+            element?.scrollIntoView({
+              behavior: "smooth",
+            });
+            toggleMenu();
+          }}
+        >
           projects
         </button>
-        <button className="hover:text-gray-300" onClick={toggleMenu}>
+        <button
+          className="hover:text-gray-300"
+          onClick={() => {
+            const element = document.getElementById("contactMe");
+            element?.scrollIntoView({
+              behavior: "smooth",
+            });
+            toggleMenu();
+          }}
+        >
           contact me
         </button>
       </div>
+      <motion.div
+        style={{
+          scaleX,
+          position: "fixed",
+          top: "6vh",
+          left: 0,
+          right: 0,
+          originX: 0,
+          height: "2px",
+          backgroundColor: "#f7f8fc",
+        }}
+      ></motion.div>
     </div>
   );
 }

@@ -4,6 +4,8 @@ import heartDiseasePredictor from "../assets/heart-disease-predictor.png";
 import movieWebapp from "../assets/movie-webapp.png";
 import electivefinderimg from "../assets/electivefinderimg.png";
 import ProjectCard from "./ProjectCard";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface Project {
   img: string;
@@ -70,16 +72,28 @@ const projects = [
 ];
 
 function Projects() {
+  const projectVariants = {
+    initial: { y: 150, opacity: 0 },
+    animate: { y: 0, opacity: 1 },
+  };
+  const ref = useRef<HTMLDivElement>(null); // Explicitly type the ref
+  const isInView = useInView(ref, { once: false });
   return (
-    <div
-      className="flex flex-col items-center my-28 sm:my-1 h-auto mt-7"
-      id="projects"
-    >
+    <div className="flex flex-col items-center my-20 h-auto mt-7" id="projects">
       <h1 className="text-5xl">projects</h1>
-      <div className="mt-5 flex flex-wrap justify-center items-center">
-        {projects.map((el: Project) => (
-          <ProjectCard project={el} />
-        ))}
+      <div ref={ref}>
+        <ul className="mt-5 flex flex-wrap justify-center items-center">
+          {projects.map((el: Project, index) => (
+            <motion.li
+              variants={projectVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 2, delay: index * 0.75 }}
+            >
+              <ProjectCard project={el} />
+            </motion.li>
+          ))}
+        </ul>
       </div>
     </div>
   );

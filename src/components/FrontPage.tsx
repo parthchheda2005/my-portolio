@@ -52,7 +52,15 @@ function FrontPage() {
           <button className="bg-blue-500 hover:bg-blue-600 text-grey-100 font-bold py-2 px-4 rounded">
             resume
           </button>
-          <button className="bg-gray-700 hover:bg-gray-800 text-grey-100 font-bold py-2 px-4 rounded">
+          <button
+            className="bg-gray-700 hover:bg-gray-800 text-grey-100 font-bold py-2 px-4 rounded"
+            onClick={() => {
+              const element = document.getElementById("aboutMe");
+              element?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
             contact me
           </button>
         </div>

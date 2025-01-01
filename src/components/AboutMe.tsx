@@ -1,4 +1,6 @@
+import { useRef } from "react";
 import IconCloud from "./ui/icon-cloud";
+import { motion, useInView } from "framer-motion";
 
 const slugs = [
   "typescript",
@@ -17,12 +19,22 @@ const slugs = [
   "tailwindcss",
   "openjdk",
   "r",
+  "eclipseide",
+  "intellijidea",
+  "postman",
 ];
 
 function AboutMe() {
+  const aboutMeVariants = {
+    initial: { scale: 0, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+  };
+  const ref = useRef<HTMLDivElement>(null); // Explicitly type the ref
+  const isInView = useInView(ref, { once: false });
+
   return (
     <div
-      className="w-full flex flex-col items-center justify-center p-4"
+      className="w-full flex flex-col items-center justify-center p-4 my-20"
       id="aboutMe"
     >
       <h1 className="text-5xl mb-8">about</h1>
@@ -32,24 +44,48 @@ function AboutMe() {
           <IconCloud iconSlugs={slugs} />
         </div>
 
-        <div className="w-full max-w-96 flex justify-center">
+        <div className="w-full max-w-96 flex justify-center" ref={ref}>
           <ul className="w-full flex flex-col gap-8 text-lg">
-            <li className="text-center">
-              📚 2nd year computer science student at the University of British
-              Columbia
-            </li>
-            <li className="text-center">
+            <motion.li
+              className="text-center"
+              variants={aboutMeVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.75, delay: 0 * 0.75 }}
+            >
+              📚 2nd year computer science student at the university of british
+              columbia
+            </motion.li>
+            <motion.li
+              className="text-center"
+              variants={aboutMeVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.75, delay: 1 * 0.75 }}
+            >
               👨‍💻 skills: javascript, typescript, python, java, c++, html, css,
               r, node.js, express, react, fastapi, mongodb, tailwindcss, git,
               github
-            </li>
-            <li className="text-center">
+            </motion.li>
+            <motion.li
+              className="text-center"
+              variants={aboutMeVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.75, delay: 2 * 0.75 }}
+            >
               💻 interested in software development, and eagar to explore other
               fields as well!
-            </li>
-            <li className="text-center">
-              interests: soccer (COYB 🔵), fantasy sports ⚽️, puzzles 🧩
-            </li>
+            </motion.li>
+            <motion.li
+              className="text-center"
+              variants={aboutMeVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.75, delay: 3 * 0.75 }}
+            >
+              other interests: soccer (COYB 🔵), fantasy sports ⚽️, puzzles 🧩
+            </motion.li>
           </ul>
         </div>
       </div>
