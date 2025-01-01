@@ -1,5 +1,6 @@
 import MyFace from "../assets/MyFace.jpg";
 import { TypeAnimation } from "react-type-animation";
+import pdf from "../assets/Parth_Chheda_Resume_Latest_Jan_2025.pdf";
 
 function FrontPage() {
   return (
@@ -49,13 +50,16 @@ function FrontPage() {
           />
         </p>
         <div className="flex flex-row justify-center items-center md:justify-start gap-4 mt-4">
-          <button className="bg-blue-500 hover:bg-blue-600 text-grey-100 font-bold py-2 px-4 rounded">
+          <button
+            className="bg-blue-500 hover:bg-blue-600 text-grey-100 font-bold py-2 px-4 rounded"
+            onClick={() => window.open(pdf, "_blank")?.focus()}
+          >
             resume
           </button>
           <button
             className="bg-gray-700 hover:bg-gray-800 text-grey-100 font-bold py-2 px-4 rounded"
             onClick={() => {
-              const element = document.getElementById("aboutMe");
+              const element = document.getElementById("contactMe");
               element?.scrollIntoView({
                 behavior: "smooth",
               });
