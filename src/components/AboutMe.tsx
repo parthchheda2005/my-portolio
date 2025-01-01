@@ -29,7 +29,7 @@ function AboutMe() {
         </div>
 
         <div className="lg:pt-16 max-w-96 flex justify-center w-full">
-          <ul className="flex flex-col gap-8 text-lg text-center md:text-left items-center justify-center mx-5">
+          <ul className="flex flex-col gap-8 text-lg text-center md:text-left items-center justify-center lg:mx-5">
             <li>
               📚 2nd year computer science student at the University of British
               Columbia
