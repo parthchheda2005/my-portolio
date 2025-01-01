@@ -7,7 +7,7 @@ import ContactMe from "./components/ContactMe";
 
 function App() {
   return (
-    <div className="text-gray-100 flex flex-col">
+    <div className={` flex flex-col text-[#E6E6E6] bg-[#313639]`}>
       <NavBar />
       <FrontPage />
       <AboutMe />

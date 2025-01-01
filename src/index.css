@@ -4,7 +4,6 @@
 @tailwind utilities;
 
 body {
-  background-color: #313639;
   font-family: "Source Code Pro", serif;
   font-optical-sizing: auto;
 }

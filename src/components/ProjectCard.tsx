@@ -16,7 +16,10 @@ interface ProjectCardProps {
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-[#3e4346] p-2 sm:p-6 sm:h-[600px] h-auto max-w-[400px] w-auto mx-auto my-6 sm:m-10 rounded-xl shadow-lg flex flex-col sm:hover:scale-105 transition-transform duration-200 cursor-pointer">
+    <div
+      onDoubleClick={() => window.open(project.repo, "_blank")?.focus()}
+      className="bg-[#3e4346] p-2 sm:p-6 sm:h-[600px] h-auto max-w-[400px] w-auto mx-auto my-6 sm:m-10 rounded-xl shadow-lg flex flex-col sm:hover:scale-105 transition-transform duration-200 cursor-pointer"
+    >
       <div className="w-full h-[200px] mb-4 relative group">
         <img
           src={project.img}
