@@ -1,18 +1,30 @@
-import MyFace from "../assets/MyFace.jpg";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import myface from "../assets/MyFace.jpg";
 import pdf from "../assets/Parth_Chheda_Resume_Latest_Jan_2025.pdf";
 
-function FrontPage() {
+const FrontPage = () => {
   return (
     <div
       className="h-screen flex justify-center items-center flex-col md:flex-row lg:ml-30 lg:mr-30"
       id="frontPage"
     >
-      <img
-        className="rounded-full w-auto h-72 sm:max-w-xs md:max-w-sm lg:max-w-md object-cover idle-orbit md:mr-10 mt-24 md:mt-0 md:mb-0"
-        src={MyFace}
-        alt="Parth Chheda"
-      />
+      <motion.div
+        className="mt-24 md:mt-0 md:mb-0 md:mr-10"
+        initial={{ opacity: 0, scale: 0.5, rotate: -360 }}
+        animate={{ opacity: 1, scale: 1, rotate: 360 }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+        }}
+      >
+        <img
+          className="rounded-full w-auto h-72 sm:max-w-xs md:max-w-sm lg:max-w-md idle-orbit"
+          src={myface}
+          alt="Parth Chheda"
+        />
+      </motion.div>
+
       <div className="px-5 my-auto text-center md:text-left">
         <h1 className="text-gray-100 text-6xl">
           <div className="lg:min-w-[550px]">
@@ -51,13 +63,13 @@ function FrontPage() {
         </p>
         <div className="flex flex-row justify-center items-center md:justify-start gap-4 mt-4">
           <button
-            className="bg-blue-500 hover:bg-blue-600 text-grey-100 font-bold py-2 px-4 rounded"
+            className="bg-blue-500 hover:bg-blue-600 text-gray-100 font-bold py-2 px-4 rounded"
             onClick={() => window.open(pdf, "_blank")?.focus()}
           >
             resume
           </button>
           <button
-            className="bg-gray-700 hover:bg-gray-800 text-grey-100 font-bold py-2 px-4 rounded"
+            className="bg-gray-700 hover:bg-gray-800 text-gray-100 font-bold py-2 px-4 rounded"
             onClick={() => {
               const element = document.getElementById("contactMe");
               element?.scrollIntoView({
@@ -71,6 +83,6 @@ function FrontPage() {
       </div>
     </div>
   );
-}
+};
 
 export default FrontPage;
