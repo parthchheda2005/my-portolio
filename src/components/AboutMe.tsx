@@ -29,8 +29,8 @@ function AboutMe() {
     initial: { scale: 0, opacity: 0 },
     animate: { scale: 1, opacity: 1 },
   };
-  const ref = useRef<HTMLDivElement>(null); // Explicitly type the ref
-  const isInView = useInView(ref, { once: false });
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
 
   return (
     <div

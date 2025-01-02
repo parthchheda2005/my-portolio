@@ -88,7 +88,7 @@ function Projects() {
               variants={projectVariants}
               initial="initial"
               animate={isInView ? "animate" : "initial"}
-              transition={{ duration: 2, delay: index * 0.75 }}
+              transition={{ duration: 0.75, delay: index * 0.75 }}
             >
               <ProjectCard project={el} />
             </motion.li>
