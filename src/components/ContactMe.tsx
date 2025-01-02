@@ -11,7 +11,7 @@ function ContactMe() {
   const [status, setStatus] = useState("");
 
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
 
   emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY!);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {

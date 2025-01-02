@@ -77,7 +77,7 @@ function Projects() {
     animate: { y: 0, opacity: 1 },
   };
   const ref = useRef<HTMLDivElement>(null); // Explicitly type the ref
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   return (
     <div className="flex flex-col items-center my-20 h-auto mt-7" id="projects">
       <h1 className="text-5xl">projects</h1>
