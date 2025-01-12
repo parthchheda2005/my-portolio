@@ -18,9 +18,9 @@ function NavBar() {
   };
 
   return (
-    <div className="h-[6vh] w-full text-gray-100 flex justify-between items-center px-4 md:px-10 fixed top-0 z-10 md:bg-[#313639] bg-[#282b2d]">
+    <div className="h-[6vh] w-full text-gray-100 flex justify-between items-center px-4 md:px-10 fixed top-0 md:bg-[#313639] bg-[#282b2d] z-20">
       <h1
-        className="text-2xl font-bold cursor-pointer lg:ml-60"
+        className="text-2xl font-bold cursor-pointer lg:ml-60 z-20"
         onClick={() => {
           const element = document.getElementById("frontPage");
           element?.scrollIntoView({
@@ -86,7 +86,7 @@ function NavBar() {
       <div
         className={`absolute top-[6vh] left-0 w-full flex flex-col items-center space-y-6 py-10 transition-transform duration-300 bg-[#3e4346] ${
           menuOpen ? "translate-x-0" : "-translate-x-full"
-        } md:hidden`}
+        } md:hidden z-10`}
       >
         <button
           className="hover:text-gray-300"

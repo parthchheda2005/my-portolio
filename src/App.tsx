@@ -9,10 +9,12 @@ function App() {
   return (
     <div className={` flex flex-col text-[#E6E6E6] bg-[#313639]`}>
       <NavBar />
-      <FrontPage />
-      <AboutMe />
-      <Projects />
-      <ContactMe />
+      <div className="z-0">
+        <FrontPage />
+        <AboutMe />
+        <Projects />
+        <ContactMe />
+      </div>
     </div>
   );
 }
