@@ -3,6 +3,7 @@ import fplHelper from "../assets/fpl-helper.png";
 import heartDiseasePredictor from "../assets/heart-disease-predictor.png";
 import movieWebapp from "../assets/movie-webapp.png";
 import electivefinderimg from "../assets/electivefinderimg.png";
+import BrainJackImg from "../assets/BrainJackImg.png";
 import ProjectCard from "./ProjectCard";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -46,6 +47,13 @@ const projects = [
       "TailwindCSS",
     ],
     desc: "Web application to help students find electives. Can perform CRUD operations on course and make accounts which use JWT Authentication, and connects to Gemini 1.5 Flash to provide recommendations on courses.",
+  },
+  {
+    img: BrainJackImg,
+    repo: "https://github.com/mliu000/nwhacks-2025-BrainJack",
+    title: "BrainJack!",
+    stack: ["React", "Node.js", "JavaScript", "MongoDB", "TailwindCSS"],
+    desc: "Blackjack with a twist - play, win, and double your winnings by answering trivia questions! Collaborated in a team of 3 to develop a game with education benefits to submit for nwHacks 2025.",
   },
   {
     img: heartDiseasePredictor,
