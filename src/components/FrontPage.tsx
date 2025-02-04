@@ -1,7 +1,7 @@
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import myface from "../assets/MyFace.jpg";
-import pdf from "../assets/Parth_Chheda_Resume_Latest_Jan_2025.pdf";
+import pdf from "../assets/Parth_Chheda_Resume_Jan2025_with_nwHacks.pdf";
 
 const FrontPage = () => {
   return (
