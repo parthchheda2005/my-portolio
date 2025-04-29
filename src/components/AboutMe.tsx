@@ -25,6 +25,7 @@ const slugs = [
   "scikitlearn",
   "pandas",
   "numpy",
+  "jupyter",
 ];
 
 function AboutMe() {
