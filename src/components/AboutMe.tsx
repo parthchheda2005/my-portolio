@@ -7,7 +7,7 @@ const slugs = [
   "javascript",
   "react",
   "html5",
-  "css3",
+  "css",
   "nodedotjs",
   "express",
   "git",
@@ -22,6 +22,8 @@ const slugs = [
   "eclipseide",
   "intellijidea",
   "postman",
+  "scikitlearn",
+  "pandas",
 ];
 
 function AboutMe() {
@@ -53,7 +55,7 @@ function AboutMe() {
               animate={isInView ? "animate" : "initial"}
               transition={{ duration: 0.75, delay: 0 * 0.75 }}
             >
-              📚 2nd year computer science student at the university of british
+              📚 3rd year computer science student at the university of british
               columbia
             </motion.li>
             <motion.li
@@ -64,8 +66,8 @@ function AboutMe() {
               transition={{ duration: 0.75, delay: 1 * 0.75 }}
             >
               👨‍💻 skills: javascript, typescript, python, java, c++, html, css,
-              r, node.js, express, react, fastapi, mongodb, tailwindcss, git,
-              github
+              r, node.js, express, react, fastapi, mongodb, sklearn, pandas,
+              tailwindcss, git, github
             </motion.li>
             <motion.li
               className="text-center"
@@ -74,8 +76,7 @@ function AboutMe() {
               animate={isInView ? "animate" : "initial"}
               transition={{ duration: 0.75, delay: 2 * 0.75 }}
             >
-              💻 interested in software development, and eagar to explore other
-              fields as well!
+              📚 currently learning: spring, java, sql
             </motion.li>
             <motion.li
               className="text-center"
