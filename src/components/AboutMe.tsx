@@ -24,6 +24,7 @@ const slugs = [
   "postman",
   "scikitlearn",
   "pandas",
+  "numpy",
 ];
 
 function AboutMe() {
@@ -67,7 +68,7 @@ function AboutMe() {
             >
               👨‍💻 skills: javascript, typescript, python, java, c++, html, css,
               r, node.js, express, react, fastapi, mongodb, sklearn, pandas,
-              tailwindcss, git, github
+              numpy, tailwindcss, git, github
             </motion.li>
             <motion.li
               className="text-center"
