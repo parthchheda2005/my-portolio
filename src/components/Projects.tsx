@@ -53,7 +53,7 @@ const projects = [
     repo: "https://github.com/parthchheda2005/nwhacks-2025-BrainJack",
     live: "https://nwhacks-2025-brain-jack.vercel.app/",
     title: "BrainJack!",
-    stack: ["React", "Node.js", "JavaScript", "MongoDB", "TailwindCSS"],
+    stack: ["React", "Node.js", "JavaScript", "PostgreSQL", "TailwindCSS"],
     desc: "Blackjack with a twist - play, win, and double your winnings by answering trivia questions! Collaborated in a team of 3 to develop a game with education benefits to submit for nwHacks 2025.",
   },
   {

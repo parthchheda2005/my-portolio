@@ -26,6 +26,7 @@ const slugs = [
   "pandas",
   "numpy",
   "jupyter",
+  "postgresql",
 ];
 
 function AboutMe() {
@@ -68,8 +69,8 @@ function AboutMe() {
               transition={{ duration: 0.75, delay: 1 * 0.75 }}
             >
               👨‍💻 skills: javascript, typescript, python, java, c++, html, css,
-              r, node.js, express, react, fastapi, mongodb, sklearn, pandas,
-              numpy, tailwindcss, git, github
+              r, sql, node.js, express, react, fastapi, mongodb, sklearn,
+              postgresql, pandas, numpy, tailwindcss, git, github
             </motion.li>
             <motion.li
               className="text-center"
@@ -78,7 +79,7 @@ function AboutMe() {
               animate={isInView ? "animate" : "initial"}
               transition={{ duration: 0.75, delay: 2 * 0.75 }}
             >
-              📚 currently learning: spring, java, sql
+              💻 currently learning: spring, java, sql
             </motion.li>
             <motion.li
               className="text-center"
