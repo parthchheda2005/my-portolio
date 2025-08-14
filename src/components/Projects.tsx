@@ -92,7 +92,7 @@ function Projects() {
       className="flex flex-col items-center mt-10 mb-20 h-auto mt-7"
       id="projects"
     >
-      <h1 className="text-5xl">projects</h1>
+      <h1 className="text-5xl mb-8">projects</h1>
       <div ref={ref}>
         <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-0 sm:gap-3 place-items-center">
           {projects.map((el: Project, index) => (

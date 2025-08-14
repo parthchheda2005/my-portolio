@@ -18,7 +18,7 @@ function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div
       onDoubleClick={() => window.open(project.repo, "_blank")?.focus()}
-      className="bg-[#3e4346] p-4 sm:p-6 sm:h-[550px] h-auto sm:max-w-[350px] max-w-[280px] w-auto mx-auto my-6 sm:m-4 sm:my-8 rounded-xl shadow-lg flex flex-col sm:hover:scale-105 transition-transform duration-200 cursor-pointer"
+      className="bg-[#3e4346] p-4 sm:p-6 sm:h-[550px] h-auto sm:max-w-[350px] max-w-[280px] w-auto mx-auto my-6 sm:m-4 rounded-xl shadow-lg flex flex-col sm:hover:scale-105 transition-transform duration-200 cursor-pointer"
     >
       <div className="w-full h-[150px] mb-3 relative group">
         <img
