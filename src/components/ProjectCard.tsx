@@ -18,9 +18,9 @@ function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div
       onDoubleClick={() => window.open(project.repo, "_blank")?.focus()}
-      className="bg-[#3e4346] p-2 sm:p-6 sm:h-[600px] h-auto sm:max-w-[400px] max-w-[375px] w-auto mx-auto my-6 sm:m-10 rounded-xl shadow-lg flex flex-col sm:hover:scale-105 transition-transform duration-200 cursor-pointer"
+      className="bg-[#3e4346] p-4 sm:p-6 sm:h-[550px] h-auto sm:max-w-[350px] max-w-[280px] w-auto mx-auto my-6 sm:m-10 rounded-xl shadow-lg flex flex-col sm:hover:scale-105 transition-transform duration-200 cursor-pointer"
     >
-      <div className="w-full h-[200px] mb-4 relative group">
+      <div className="w-full h-[150px] mb-3 relative group">
         <img
           src={project.img}
           alt={project.title}
@@ -37,7 +37,7 @@ function ProjectCard({ project }: ProjectCardProps) {
               target="_blank"
               className="text-white hover:-translate-y-1 hover:scale-105 transition-all"
             >
-              <FaGithub size={28} />
+              <FaGithub size={22} />
             </a>
             {project.live && (
               <a
@@ -45,12 +45,12 @@ function ProjectCard({ project }: ProjectCardProps) {
                 target="_blank"
                 className="text-white hover:-translate-y-1 hover:scale-105 transition-all"
               >
-                <GoLinkExternal size={28} />
+                <GoLinkExternal size={22} />
               </a>
             )}
           </div>
         </div>
-        <p className="text-sm sm:text-base text-gray-200 overflow-y-auto mb-4">
+        <p className="text-xs sm:text-base text-gray-200 overflow-y-auto mb-4">
           {project.desc}
         </p>
 
@@ -58,7 +58,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           {project.stack.map((curr, index) => (
             <li
               key={curr}
-              className={`rounded-full px-3 py-1.5 text-sm whitespace-nowrap
+              className={`rounded-full px-3 py-1.5 sm:text-sm text-xs whitespace-nowrap
                   ${index % 2 === 0 ? "bg-blue-500" : "bg-teal-500"}
                   hover:opacity-90 transition-opacity`}
             >

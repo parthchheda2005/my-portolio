@@ -15,17 +15,14 @@ const slugs = [
   "python",
   "fastapi",
   "mongodb",
-  "cplusplus",
   "tailwindcss",
   "openjdk",
-  "r",
-  "eclipseide",
+  "googlecloud",
+  "spring",
+  "springboot",
+  "nextdotjs",
   "intellijidea",
   "postman",
-  "scikitlearn",
-  "pandas",
-  "numpy",
-  "jupyter",
   "postgresql",
 ];
 
@@ -68,9 +65,10 @@ function AboutMe() {
               animate={isInView ? "animate" : "initial"}
               transition={{ duration: 0.75, delay: 1 * 0.75 }}
             >
-              👨‍💻 skills: javascript, typescript, python, java, c++, html, css,
-              r, sql, node.js, express, react, fastapi, mongodb, sklearn,
-              postgresql, pandas, numpy, tailwindcss, git, github
+              👨‍💻 skills: javascript, typescript, python, java, html, css, sql,
+              node.js, express, react, fastapi, mongodb, postgresql,
+              tailwindcss, git, github, google cloud, spring boot, microsoft
+              azure
             </motion.li>
             <motion.li
               className="text-center"
@@ -79,7 +77,7 @@ function AboutMe() {
               animate={isInView ? "animate" : "initial"}
               transition={{ duration: 0.75, delay: 2 * 0.75 }}
             >
-              💻 currently learning: spring, java, sql
+              💻 currently learning: azure
             </motion.li>
             <motion.li
               className="text-center"
