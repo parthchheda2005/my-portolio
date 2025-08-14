@@ -48,6 +48,19 @@ function NavBar() {
           <button
             className="hover:text-gray-300"
             onClick={() => {
+              const element = document.getElementById("experience");
+              element?.scrollIntoView({
+                behavior: "smooth",
+              });
+            }}
+          >
+            experience
+          </button>
+        </li>
+        <li>
+          <button
+            className="hover:text-gray-300"
+            onClick={() => {
               const element = document.getElementById("projects");
               element?.scrollIntoView({
                 behavior: "smooth",
@@ -99,6 +112,18 @@ function NavBar() {
           }}
         >
           about
+        </button>
+        <button
+          className="hover:text-gray-300"
+          onClick={() => {
+            const element = document.getElementById("experience");
+            element?.scrollIntoView({
+              behavior: "smooth",
+            });
+            toggleMenu();
+          }}
+        >
+          experience
         </button>
         <button
           className="hover:text-gray-300"

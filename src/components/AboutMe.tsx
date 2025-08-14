@@ -41,7 +41,7 @@ function AboutMe() {
     >
       <h1 className="text-5xl mb-8">about</h1>
 
-      <div className="w-full flex lg:flex-row flex-col items-center justify-center gap-12 lg:gap-24">
+      <div className="w-full flex lg:flex-row flex-col items-center justify-center gap-12 lg:gap-24 sm:text-base text-sm">
         <div className="flex justify-center">
           <IconCloud iconSlugs={slugs} />
         </div>

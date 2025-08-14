@@ -75,10 +75,8 @@ function ContactMe() {
         </div>
         <ul className="flex flex-row flex-wrap gap-5">
           <motion.li
-            initial={{ opacity: 0, scale: 0.5, rotateX: "-360deg" }}
-            animate={
-              isInView ? { opacity: 1, scale: 1, rotateX: "360deg" } : {}
-            }
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{
               duration: 0.8,
               delay: 1 * 0.5,
@@ -95,10 +93,8 @@ function ContactMe() {
             </button>
           </motion.li>
           <motion.li
-            initial={{ opacity: 0, scale: 0.5, rotateX: "-360deg" }}
-            animate={
-              isInView ? { opacity: 1, scale: 1, rotateX: "360deg" } : {}
-            }
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{
               duration: 0.8,
               delay: 2 * 0.5,
@@ -118,10 +114,8 @@ function ContactMe() {
             </button>
           </motion.li>
           <motion.li
-            initial={{ opacity: 0, scale: 0.5, rotateX: "-360deg" }}
-            animate={
-              isInView ? { opacity: 1, scale: 1, rotateX: "360deg" } : {}
-            }
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{
               duration: 0.8,
               delay: 3 * 0.5,
