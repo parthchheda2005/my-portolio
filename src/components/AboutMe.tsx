@@ -86,7 +86,8 @@ function AboutMe() {
               animate={isInView ? "animate" : "initial"}
               transition={{ duration: 0.75, delay: 3 * 0.75 }}
             >
-              other interests: soccer (COYB 🔵), fantasy sports ⚽️, puzzles 🧩
+              other interests: soccer (COYB 🔵), fantasy sports ⚽️, comic books
+              (currently reading grant morrison's new x-men) 📖
             </motion.li>
           </ul>
         </div>
